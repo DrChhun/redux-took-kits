@@ -1,16 +1,14 @@
-import createSlice from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    numOfCakes: 10
+    numOfCakes: 20
 }
 
-//invoke
-//this function accept object as argument
 const cakeSlice = createSlice({
     name: 'cake',
     initialState,
     reducers: {
-        ordered: (state) => {
+        ordered: state => {
             state.numOfCakes--
         },
         restocked: (state, action) => {
